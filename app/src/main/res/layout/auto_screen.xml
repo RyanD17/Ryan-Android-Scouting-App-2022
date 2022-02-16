@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".autoscreen.autoScreen">
+
+    <TextView
+        android:id="@+id/timerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginEnd="4dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.328" />
+
+    <TextView
+        android:id="@+id/matchNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.317" />
+
+    <TextView
+        android:id="@+id/teamNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toStartOf="@+id/timerTxt"
+        app:layout_constraintStart_toEndOf="@+id/matchNum"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.312" />
+
+    <TextView
+        android:id="@+id/auto_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/auto"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/matchTimer"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.547" />
+
+    <Button
+        android:id="@+id/startMatchTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Timer"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintStart_toEndOf="@+id/auto_txt"
+        app:layout_constraintTop_toBottomOf="@+id/matchTimer"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/pauseBtn"
+        android:layout_width="50dp"
+        android:layout_height="44dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/startMatchTimer"
+        app:srcCompat="@android:drawable/ic_media_pause"
+        tools:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/commentBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/startMatchTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startMatchTimer"
+        app:layout_constraintTop_toTopOf="@+id/startMatchTimer"
+        app:srcCompat="@android:drawable/sym_action_chat"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/taxi"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/taxi" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/autoLowHit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="auto low hit"
+                    android:textAllCaps="true" />
+
+                <TextView
+                    android:id="@+id/autoLowHitCount"
+                    android:layout_width="43dp"
+                    android:layout_height="48dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/autoHighHit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="auto high hit" />
+
+                <TextView
+                    android:id="@+id/autoHighHitCount"
+                    android:layout_width="24dp"
+                    android:layout_height="32dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/autoLowMiss"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="auto low miss" />
+
+                <TextView
+                    android:id="@+id/autoLowMissCount"
+                    android:layout_width="38dp"
+                    android:layout_height="39dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/autoHighMissCount"
+                    android:layout_width="29dp"
+                    android:layout_height="36dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textColorHint="@color/white"
+                    android:textIsSelectable="false" />
+
+                <Button
+                    android:id="@+id/autoHighMiss"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="auto high miss"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/black" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="165dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/HPMiss"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/human_player_miss" />
+
+                <TextView
+                    android:id="@+id/HPMissCount"
+                    android:layout_width="29dp"
+                    android:layout_height="36dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="@android:color/white" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/HPHitCount"
+                    android:layout_width="28dp"
+                    android:layout_height="36dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/HPHit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/human_player_hit" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/undoButton"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/startMatchTimer"
+        app:layout_constraintEnd_toEndOf="@+id/startMatchTimer"
+        app:layout_constraintStart_toEndOf="@+id/pauseBtn"
+        app:layout_constraintTop_toTopOf="@+id/startMatchTimer"
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

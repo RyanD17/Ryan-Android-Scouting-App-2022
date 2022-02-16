@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">scoutingApp</string>
+    <string name="auto_low_hit">Auto Low Hit</string>
+    <string name="alliance_trench">alliance Trench</string>
+    <string name="rendezvous">rendezvous</string>
+    <string name="opponent_trench">Opponent Trench</string>
+    <string name="auto">Auto</string>
+    <string name="start_timer" />
+    <string name="_2">2</string>
+    <string name="human_player_hit">human Player hit</string>
+    <string name="_0">0</string>
+    <string name="human_player_miss">Human Player Miss</string>
+    <string name="taxi">TAXI</string>
+    <string name="todo">TODO</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <string name="menu_settings">Scouting Options</string>
+    <string name="menu_new_entry">New Entry</string>
+
+    <string name="hint_match">Match</string>
+    <string name="hint_team">Team</string>
+    <string name="hint_year">Year</string>
+
+    <string name="comments_hint">Comments</string>
+
+    <string name="layout_error">There was a problem with the layout</string>
+
+    <string name="send_with_another_method">Send with alternative method</string>
+    <string name="btn_pause">Pause</string>
+    <string name="btn_undo">Undo</string>
+    <string name="open_source_licenses">Open Source Licenses</string>
+    <string name="additional_info">Additional Info</string>
+    <string name="button_ok">OK</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="unknown_tab">Unknown</string>
+    <string name="qr_code_tab">QR Code</string>
+    <string name="error_retrieving_data">Error Retrieving Data</string>
+    <string name="check_connection">Check your Internet Connection</string>
+    <string name="send_with">Send With…</string>
+    <string name="button_continue">Continue</string>
+    <string name="settings_title">Settings</string>
+    <string name="select_frc_event">Select FRC Event</string>
+    <string name="add_new_entry">Add New Entry</string>
+
+    <string name="team_template">Team %1$d</string>
+    <string name="override_message_template">
+        Select %1$d %2$s? This will load the match schedule and hide previous entries
+    </string>
+    <string name="version_name">Version:</string>
+    <string name="current_event">Current Event: %1$s %2$s</string>
+    <string name="delete_this_entry">Delete This Entry?</string>
+    <string name="scout_input_hint">First L</string>
+    <string name="scout_input_title">Enter Name</string>
+    <string name="select_board_title">Select Board</string>
+</resources>

@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".autoscreen.autoScreen">
+    <ImageView
+        android:id="@+id/timerPng"
+        android:layout_width="41dp"
+        android:layout_height="17dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.748"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_idle_alarm"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/teamPNG"
+        android:layout_width="41dp"
+        android:layout_height="17dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toStartOf="@+id/timerPng" />
+
+    <ImageView
+        android:id="@+id/matchNumPNG"
+        android:layout_width="41dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264" />
+
+    <TextView
+        android:id="@+id/matchNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginEnd="108dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toStartOf="@+id/teamPNG"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.263" />
+
+    <ImageView
+        android:id="@+id/boardPNG"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toStartOf="@+id/boardTxt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/matchNumber"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264"
+        app:srcCompat="@android:drawable/ic_input_get" />
+
+    <TextView
+        android:id="@+id/boardTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toStartOf="@+id/teamPNG"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264" />
+
+    <TextView
+        android:id="@+id/teamNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toStartOf="@+id/timerPng"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/teamPNG"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <TextView
+        android:id="@+id/timerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.371"
+        app:layout_constraintStart_toEndOf="@+id/timerPng"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <ProgressBar
+        android:id="@+id/matchTimer"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.676" />
+
+    <Button
+        android:id="@+id/startMatchTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Timer"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/matchTimer"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/pauseBtn"
+        android:layout_width="50dp"
+        android:layout_height="44dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/startMatchTimer"
+        app:srcCompat="@android:drawable/ic_media_pause"
+        tools:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/commentBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/startMatchTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startMatchTimer"
+        app:layout_constraintTop_toTopOf="@+id/startMatchTimer"
+        app:srcCompat="@android:drawable/sym_action_chat"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:orientation="vertical"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/foul_count"
+                    android:layout_width="32dp"
+                    android:layout_height="45dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/foul_Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Foul" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tech_foul_count"
+                    android:layout_width="32dp"
+                    android:layout_height="45dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/tech_foul_Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="tech foul" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ToggleButton
+                    android:id="@+id/defending"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/purple_500"
+                    android:textColor="#93FF45"
+                    android:textOff="defending"
+                    android:textOn="defending" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ToggleButton
+                    android:id="@+id/risisting"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/purple_500"
+                    android:textColor="#93FF45"
+                    android:textOff="risisting"
+                    android:textOn="risisting" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/lowhit_txt"
+                    android:layout_width="32dp"
+                    android:layout_height="45dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/lowHit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="low hit" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/highhit_txt"
+                    android:layout_width="32dp"
+                    android:layout_height="45dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/highHit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="high hit" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/lowMiss_txt"
+                    android:layout_width="32dp"
+                    android:layout_height="45dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/lowMiss"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="low Miss" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/lowHit_txt"
+                    android:layout_width="32dp"
+                    android:layout_height="45dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/highMiss"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="high miss" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/undoButton"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="@+id/startMatchTimer"
+        app:layout_constraintEnd_toEndOf="@+id/startMatchTimer"
+        app:layout_constraintStart_toEndOf="@+id/pauseBtn"
+        app:layout_constraintTop_toTopOf="@+id/startMatchTimer"
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
