@@ -6,7 +6,6 @@ import android.widget.ToggleButton;
 
 import com.example.scoutingapp2022.R;
 import com.example.scoutingapp2022.autoscreen.autoScreen;
-import com.example.scoutingapp2022.match_screen.MainActivity;
 
 
 public class endgame extends MainActivity {
